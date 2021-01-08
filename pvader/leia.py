@@ -11,9 +11,12 @@ Repositório: https://github.com/cjhutto/vaderSentiment
 '''
 
 import re
+import os
 import math
 import unicodedata
 from itertools import product
+
+current_dir=os.path.dirname(os.path.abspath(__file__))
 
 # Empirically derived mean sentiment intensity rating increase for booster words
 # TODO: Portuguese update
@@ -35,7 +38,7 @@ PUNC_LIST = [
 ]
 
 # Negations (Portuguese)
-NEGATE = [t.strip() for t in open('./lexicons/negate.txt')]
+NEGATE = [t.strip() for t in open(current_dir+'/lexicons/negate.txt')]
 
 # Booster/dampener 'intensifiers' or 'degree adverbs' (Portuguese)
 boosters = []
