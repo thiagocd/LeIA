@@ -14,6 +14,8 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License'
     ],
+    package_data={'': ['pvader/lexicons']},
+    include_package_data=True,
     install_requires=[
     ],
     packages=find_packages(include=["pvader","pvader/lexicons"]),
