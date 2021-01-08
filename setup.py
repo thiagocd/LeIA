@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='leia_vader',
+    name='pvader',
     version='2.0.0',
     description='Análise de Sentimentos em Português',
     long_description="LeIA (Léxico para Inferência Adaptada) é um fork do léxico e ferramenta para análise de sentimentos VADER (Valence Aware Dictionary and sEntiment Reasoner) adaptado para textos em português, com suporte para emojis e foco na análise de sentimentos de textos expressos em mídias sociais - mas funcional para textos de outros domínios.",
@@ -16,5 +16,5 @@ setup(
     ],
     install_requires=[
     ],
-    packages=find_packages(),
+    packages=find_packages(include=["."]),
 )
