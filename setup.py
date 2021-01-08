@@ -16,5 +16,5 @@ setup(
     ],
     install_requires=[
     ],
-    packages=find_packages(include=["pvader"]),
+    packages=find_packages(include=["pvader","pvader/lexicons"]),
 )
