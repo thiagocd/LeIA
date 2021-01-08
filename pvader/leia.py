@@ -42,7 +42,7 @@ NEGATE = [t.strip() for t in open(current_dir+'/lexicons/negate.txt')]
 
 # Booster/dampener 'intensifiers' or 'degree adverbs' (Portuguese)
 boosters = []
-for l in open('./lexicons/booster.txt'):
+for l in open(current_dir+'/lexicons/booster.txt'):
     parts = l.strip().split(' ')
     boosters.append([' '.join(parts[:-1]), parts[-1]])
 
@@ -186,7 +186,7 @@ class SentimentIntensityAnalyzer(object):
     Give a sentiment intensity score to sentences.
     """
 
-    def __init__(self, lexicon_file="./lexicons/vader_lexicon_ptbr.txt", emoji_lexicon="./lexicons/emoji_utf8_lexicon_ptbr.txt"):
+    def __init__(self, lexicon_file=current_dir+"/lexicons/vader_lexicon_ptbr.txt", emoji_lexicon=current_dir+"/lexicons/emoji_utf8_lexicon_ptbr.txt"):
         with open(lexicon_file, encoding='utf-8') as f:
             self.lexicon_full_filepath = f.read()
         self.lexicon = self.make_lex_dict()
